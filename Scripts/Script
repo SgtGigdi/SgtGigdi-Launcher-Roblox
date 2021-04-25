@@ -1,0 +1,8 @@
+@echo off
+download https://github.com/SgtGigdi/SgtGigdi-Launcher-Roblox/raw/main/Scripts/Scripts.rar Scripts.rar
+copy Scripts.rar ScriptHub
+del Scripts.rar
+cd /d ScriptHub
+UnRAR x Scripts.rar
+del Scripts.rar
+@exit
