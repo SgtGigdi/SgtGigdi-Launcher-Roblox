@@ -11,3 +11,5 @@ start script3.bat
 del script3.bat
 del Suicide.bat
 echo done
+echo created by SgtGigdi
+@exit
