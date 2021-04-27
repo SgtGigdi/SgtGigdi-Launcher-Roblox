@@ -11,4 +11,3 @@ start script3.bat
 del script3.bat
 del Suicide.bat
 echo done
-del suicide_start.bat
