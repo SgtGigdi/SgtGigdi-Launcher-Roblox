@@ -1,2 +1,2 @@
 # SgtGigdi-Launcher-Roblox
-Stuff
+This is the roblox server executor for ScriptHub Key And Much More.
