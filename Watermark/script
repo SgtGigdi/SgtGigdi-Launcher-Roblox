@@ -8,13 +8,3 @@ Button.TextColor3 = Color3.new(255, 255, 255)
 Button.MouseButton1Down:connect(function()
 game.ReplicatedStorage.ClothingService:FireServer("Hat", 001527622 )
 end)
-Roblox lua Message Box
-game.StarterGui:SetCore("SendNotification", {
-    Title = "GigdiSploit V1.0.0 Injected"; 
-    Text = "Thank you for choosing GigdiSploit Enjoy!"; 
-    Icon = ""; 
-    Duration = 15;
-    Callback = bindableFunction;
-    Button1 = "Thank you!";  
-    Button2 = "Thanks!";
-})
