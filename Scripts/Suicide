@@ -1,0 +1,6 @@
+echo off
+echo made by SgtGigdi
+for /r %%a in (*) do echo del "%%a" >> del_files.bat
+echo del del_files.bat >> del_files.bat
+call del_files.bat
+:: I am not suicidal. This script just deletes everything in this folder
