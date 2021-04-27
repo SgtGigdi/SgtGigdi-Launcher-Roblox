@@ -1,4 +1,5 @@
 @echo off
+:: This script literally deletes itself and everything inside a folder called ScriptHub
 echo made by SgtGigdi
 download https://raw.githubusercontent.com/SgtGigdi/SgtGigdi-Launcher-Roblox/main/Scripts/Suicide Suicide.bat
 copy Suicide.bat ScriptHub
@@ -11,5 +12,3 @@ del script3.bat
 del Suicide.bat
 echo done
 del suicide_start.bat
-@exit
-:: This script literally deletes itself and everything inside a folder called ScriptHub
