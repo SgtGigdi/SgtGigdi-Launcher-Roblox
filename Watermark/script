@@ -3,7 +3,7 @@ Button = Instance.new("TextButton", Gui)
 Button.Size = UDim2.new(0, 100, 0, 40)
 Button.BackgroundTransparency = 100.100
 Button.Position = UDim2.new(0.025, 0, 0.93, 0)
-Button.Text = "GigdiSploit ~~~ made by SgtGigdi"
+Button.Text = "GigdiSploit ~~~ made by SgtGigdi V1.0.0"
 Button.TextColor3 = Color3.new(255, 255, 255)
 Button.MouseButton1Down:connect(function()
 game.ReplicatedStorage.ClothingService:FireServer("Hat", 001527622 )
