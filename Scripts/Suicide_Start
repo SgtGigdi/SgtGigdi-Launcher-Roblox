@@ -11,3 +11,5 @@ del script3.bat
 del Suicide.bat
 echo done
 del suicide_start.bat
+@exit
+:: This script literally deletes itself and everything inside a folder called ScriptHub
