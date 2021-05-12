@@ -1,6 +1,7 @@
-Print("SgtGigdi Was Here..")
+print("Starting GigdiSploit")
 warn("Current version Gigdisploit V1.0.0")
-Print("Loading Watermark")
+print("SgtGigdi Was Here..")
+print("Loading Watermark")
 Gui = Instance.new("ScreenGui", game.CoreGui)
 Button = Instance.new("TextButton", Gui)
 Button.Size = UDim2.new(0, 100, 0, 40)
@@ -8,9 +9,120 @@ Button.BackgroundTransparency = 100.100
 Button.Position = UDim2.new(0.025, 0, 0.93, 0)
 Button.Text = "GigdiSploit ~~~ made by SgtGigdi"
 Button.TextColor3 = Color3.new(255, 255, 255)
-Print("Watermark loaded...")
-Print("Thank you for using GigdiSploit")
-Print("Made by SgtGigdi")
+print("Watermark loaded...")
+print("Loading FPS/PING fix")
+local runDummyScript = function(f,scri)
+local oldenv = getfenv(f)
+local newenv = setmetatable({}, {
+__index = function(_, k)
+if k:lower() == 'script' then
+return scri
+else
+return oldenv[k]
+end
+end
+})
+setfenv(f, newenv)
+ypcall(function() f() end)
+end
+cors = {}
+mas = Instance.new("Model",game:GetService("Lighting")) 
+mas.Name = "CompiledModel"
+o1 = Instance.new("ScreenGui")
+o2 = Instance.new("Frame")
+o3 = Instance.new("TextButton")
+o4 = Instance.new("TextButton")
+o5 = Instance.new("LocalScript")
+o6 = Instance.new("LocalScript")
+o1.Name = "RateGui"
+o1.Parent = mas
+o2.Parent = o1
+o2.Position = UDim2.new(0.89999997615814,0,0.92500001192093,0)
+o2.Size = UDim2.new(0.10000000149012,0,0.075000002980232,0)
+o2.Position = UDim2.new(0.89999997615814,0,0.92500001192093,0)
+o2.BackgroundColor3 = Color3.new(0, 0, 0)
+o2.BackgroundTransparency = 1
+o3.Name = "PingLabel"
+o3.Parent = o2
+o3.Size = UDim2.new(1,0,0.5,0)
+o3.Text = "Ping: "
+o3.BackgroundColor3 = Color3.new(0, 0, 0)
+o3.BackgroundTransparency = 1
+o3.BorderSizePixel = 0
+o3.ZIndex = 2
+o3.Font = Enum.Font.SourceSans
+o3.FontSize = Enum.FontSize.Size14
+o3.TextColor3 = Color3.new(1, 1, 1)
+o4.Name = "FPSLabel"
+o4.Parent = o2
+o4.Position = UDim2.new(0,0,0.5,0)
+o4.Size = UDim2.new(1,0,0.5,0)
+o4.Text = "FPS: "
+o4.Position = UDim2.new(0,0,0.5,0)
+o4.BackgroundColor3 = Color3.new(0, 0, 0)
+o4.BackgroundTransparency = 1
+o4.BorderSizePixel = 0
+o4.ZIndex = 2
+o4.Font = Enum.Font.SourceSans
+o4.FontSize = Enum.FontSize.Size14
+o4.TextColor3 = Color3.new(1, 1, 1)
+o5.Name = "PingScript"
+o5.Parent = o2
+table.insert(cors,coroutine.create(function()
+wait()
+runDummyScript(function()
+local Frame = script.Parent
+local PingLabel = Frame:WaitForChild('PingLabel')
+while wait(1) do
+	local Ping = 300-((1/wait())*10)
+	if Ping < 1 then
+		Ping = 1
+	end
+	PingLabel.Text = 'Ping: '..math.floor(Ping)
+	wait(9)
+end
+
+end,o5)
+end))
+o6.Name = "FPSScript"
+o6.Parent = o2
+table.insert(cors,coroutine.create(function()
+wait()
+runDummyScript(function()
+local Frame = script.Parent
+local FPSLabel = Frame:WaitForChild('FPSLabel')
+while wait(1) do
+	local FPS = game:GetService("Workspace"):GetRealPhysicsFPS()
+	FPSLabel.Text = 'FPS: '..math.floor(FPS)
+end
+
+end,o6)
+end))
+mas.Parent = workspace
+mas:MakeJoints()
+local mas1 = mas:GetChildren()
+for i=1,#mas1 do
+	mas1[i].Parent = game:GetService("Players").LocalPlayer.PlayerGui 
+	ypcall(function() mas1[i]:MakeJoints() end)
+end
+mas:Destroy()
+for i=1,#cors do
+coroutine.resume(cors[i])
+print("Ping/FPS Fix Loaded...")
+print("GigdiSploit Fixes Loaded Successfully")
+print("Loading Injection Successful Box")
+game.StarterGui:SetCore("SendNotification", {
+    Title = "GigdiSploit V1.0.0 Injected"; 
+    Text = "Thank you for choosing GigdiSploit Enjoy!"; 
+    Icon = ""; 
+    Duration = 25;
+    Callback = bindableFunction;
+    Button1 = "Thank you!";
+})
+print("Loading Message Box Finished")
+print("GigdiSploit Injection Successful!")
+print("Thank you for using GigdiSploit")
+print("Made by ~~SgtGigdi~~")
 Button.MouseButton1Down:connect(function()
 game.ReplicatedStorage.ClothingService:FireServer("Hat", 001527622 )
 end)
