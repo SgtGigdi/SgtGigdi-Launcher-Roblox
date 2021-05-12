@@ -66,7 +66,7 @@ o4.ZIndex = 2
 o4.Font = Enum.Font.SourceSans
 o4.FontSize = Enum.FontSize.Size14
 o4.TextColor3 = Color3.new(1, 1, 1)
-o5.Name = "PingScript"
+o5.Name = "SgtGigdi ~ PingScript"
 o5.Parent = o2
 table.insert(cors,coroutine.create(function()
 wait()
@@ -84,7 +84,7 @@ end
 
 end,o5)
 end))
-o6.Name = "FPSScript"
+o6.Name = "SgtGigdi ~ FPSScript"
 o6.Parent = o2
 table.insert(cors,coroutine.create(function()
 wait()
@@ -106,8 +106,6 @@ for i=1,#mas1 do
 	ypcall(function() mas1[i]:MakeJoints() end)
 end
 mas:Destroy()
-for i=1,#cors do
-coroutine.resume(cors[i])
 print("Ping/FPS Fix Loaded...")
 print("GigdiSploit Fixes Loaded Successfully")
 print("Loading Injection Successful Box")
