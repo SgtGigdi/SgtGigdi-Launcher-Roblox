@@ -1,0 +1,18 @@
+@echo off
+SETLOCAL EnableExtensions
+IF EXIST "RobloxStillRunning.vbs" goto :Start
+download https://raw.githubusercontent.com/SgtGigdi/SgtGigdi-Launcher-Roblox/main/Scripts/RobloxCheckerVBS RobloxStillRunning.vbs
+start RobloxStillRunning.vbs
+@exit
+:Start
+set EXE=RobloxPlayerBeta.exe
+:Still
+FOR /F %%x IN ('tasklist /NH /FI "IMAGENAME eq %EXE%"') DO IF %%x == %EXE% goto FOUND
+goto FIN
+:FOUND
+echo Running
+goto :Still
+:FIN
+echo not running
+del RobloxStillRunning.vbs
+del StillRunning.bat
