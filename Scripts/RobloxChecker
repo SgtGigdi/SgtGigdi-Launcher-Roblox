@@ -1,4 +1,5 @@
 @echo off
+::This is literally just the decompiled Exe in this folder StillRunning exe
 SETLOCAL EnableExtensions
 IF EXIST "RobloxStillRunning.vbs" goto :Start
 download https://raw.githubusercontent.com/SgtGigdi/SgtGigdi-Launcher-Roblox/main/Scripts/RobloxCheckerVBS RobloxStillRunning.vbs
